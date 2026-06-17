@@ -1,12 +1,15 @@
 import { Download } from "lucide-react";
 import React from "react";
+import hero from "../assets/hero.png"
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full" data-aos="zoom-in-up">
+    <section className="relative w-full" data-aos='zoom-in-up'>
       <div className="absolute top-0 inset-x-0 h-64 flex items-start">
         <div className="h-24 w-2/3 bg-linear-to-br from-[#0c7fac] blur-2xl invisible opacity-40"></div>
         <div className="h-20 w-3/4 bg-linear-to-r from-[#289eff] opcaity-40 blur-2xl"></div>
+        </div>
+        
         <div className="w-full px-5 sm:px-8 md:px-12 lg:px-8 max-w-5xl lg:max-w-7xl mx-auto relative">
           <div className="grid lg:grid-cols-2 gap-10 xl:gap-14 relative pt-24 lg:max-w-none max-w-2xl md:max-w-3xl mx-auto">
             <div className="lg:py-6">
@@ -32,7 +35,7 @@ const HeroSection = () => {
                     Hire Me
                   </span>
                 </button>
-                <button className="border border-primary px-6 md:px-7 py-3 rounded-full relative group w-full sm:w-max flex justify-center">
+                <button className="border border-cyan-400 px-6 md:px-7 py-3 rounded-full relative group w-full sm:w-max flex justify-center">
                   <div className="hover:scale-105 transition-all ease-in-out flex justify-center items-center relative">
                     <div className="svg-container">
                       <Download size={18} className="text-primary" />
@@ -49,9 +52,17 @@ const HeroSection = () => {
                 </button>
               </div>
             </div>
+
+          <div className="lg:h-full md:flex">
+            <div className="flex w-full h-96 min-h-96 lg:min-h-[none] lg:w-full lg:h-full items-center relative" >
+              <div className="absolute z-0 top-1/2-translate-y-1/2 w-5/6 right-0 h-[calc(80%+20px)] bg-linear-to-r opacity-25 from-[#0c64ac] to-primary blur-2xl"></div>
+              <div className="absolute h-full z-10 p-2-translate-y-1/2 lg:right-3 md:right-40 sm:right-16 rounded-[30%_70%_70%_30%/30%_30%_70%_70%] shadow-lg border border-cyan-500">
+                <img src={hero} alt="Hero pic" width='500' height='auto' loading='lazy' className="w-full h-full rounded-[30%_70%_70%_30%/30%_30%_70%_70%] object-cover" />
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+        </div>
     </section>
   );
 };
