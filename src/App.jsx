@@ -6,6 +6,10 @@ import HeroSection from "./components/HeroSection";
 import Education from "./components/Education";
 import Certificates from "./components/Certificates";
 import About from "./components/About";
+import Experience from "./components/Experience";
+import Projects from "./components/Projects";
+import ContactSection from "./components/ContactSection";
+import Footer from "./components/Footer";
 
 const App = () => {
   useEffect(() => {
@@ -22,6 +26,10 @@ const App = () => {
       <Education />
       <Certificates />
       <About />
+      <Experience />
+      <Projects />
+      <ContactSection />
+      <Footer />
     </div>
   );
 };
