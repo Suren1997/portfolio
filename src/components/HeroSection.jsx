@@ -44,8 +44,8 @@ const HeroSection = () => {
                     <div className="download-loader text-white hidden"></div>
                   </div>
                   <a
-                    href="/resume.pdf"
-                    download="resume.pdf"
+                    href="../UPDATED_SUREN_RESUME.pdf"
+                    download="SurendarResume.pdf"
                     className="pl-2 text-primary"
                   >
                     Download resume
