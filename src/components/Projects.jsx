@@ -1,30 +1,30 @@
 import React from "react";
-import proj1 from "../assets/proj1.png";
-import proj2 from "../assets/proj2.png";
-import proj3 from "../assets/proj3.png";
+import proj1 from "../assets/weather.png";
+import proj2 from "../assets/Age_Thumb.png";
+import proj3 from "../assets/Music_Thumb.png";
 
 const Projects = () => {
   const projects = [
     {
       id: 1,
       image: proj1,
-      title: "E-Commerce Platform",
-      desc: "Modern e-commerce solution",
-      tech: ["React", "Node.js", "MongoDB"],
+      title: "Weather App",
+      desc: "Search weather by city name",
+      tech: ["HTML","CSS","Javascript"],
     },
     {
       id: 2,
       image: proj2,
-      title: "Fitness Tracker",
-      desc: "Track Workouts",
-      tech: ["React", "Node.js", "MongoDB"],
+      title: "Age Calculator",
+      desc: "Calculate Age",
+      tech: ["HTML","CSS","Javscript"],
     },
     {
       id: 3,
       image: proj3,
-      title: "E-Commerce Platform",
-      desc: "Modern e-commerce solution",
-      tech: ["React", "Node.js", "MongoDB"],
+      title: "Music Player",
+      desc: "Customized own Music with Music Player",
+      tech: ["HTML", "CSS", "Javascript"],
     },
   ];
   return (

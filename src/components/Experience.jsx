@@ -7,6 +7,7 @@ import {
   Layers,
   Layout,
   Terminal,
+  Box
 } from "lucide-react";
 
 const Experience = () => {
@@ -14,7 +15,7 @@ const Experience = () => {
     {
       id: 1,
       name: "HTML & CSS",
-      width: "85%",
+      width: "75%",
       icon: Layout,
     },
     {
@@ -26,14 +27,14 @@ const Experience = () => {
     {
       id: 3,
       name: "Javascript",
-      width: "98%",
+      width: "80%",
       icon: Terminal,
     },
     {
       id: 4,
-      name: "Figma",
-      width: "91%",
-      icon: Layers,
+      name: "Redux",
+      width: "75%",
+      icon: Box,
     },
   ];
 
@@ -41,14 +42,8 @@ const Experience = () => {
     {
       id: 1,
       role: "Software Engineer",
-      company: "MicroSoft",
-      date: "Mar 2024 - Sep 2026",
-    },
-    {
-      id: 2,
-      role: "Front End Developer",
-      company: "Spotify",
-      date: "Mar 2025 - Sep 2026",
+      company: "Solverminds Solutions",
+      date: "Oct 2022 - Jun 2026",
     },
   ];
 

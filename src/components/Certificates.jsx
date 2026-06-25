@@ -5,27 +5,27 @@ const Certificates = () => {
   const certifications = [
     {
       id: 1,
-      title: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
-      issue: "Coursera / Meta",
-      date: "Dec 2023",
+      title: "Rising Star Award",
+      issue: "Solverminds",
+      date: "2024",
       link: "#",
-      desc: "amet cupiditate aspernatur autem vel quod, ratione dolorem fugiat alias rerum.",
+      desc: "Awarded the 'Rising Star' recognition for excellence in team collaboration, delivering impactful results, and showing high potential for future leadership within the department.",
     },
     {
       id: 2,
-      title: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
-      issue: "Amazon web services",
-      date: "Dec 2023",
+      title: "Anthropic AI: Fluency Framework and Foundation",
+      issue: "Anthropic",
+      date: "2026",
       link: "#",
-      desc: "amet cupiditate aspernatur autem vel quod, ratione dolorem fugiat alias rerum.",
+      desc: "Completed the Anthropic AI Fluency curriculum, developing core competencies to leverage generative AI safely and effectively:",
     },
     {
       id: 3,
-      title: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+      title: "Anthropic AI:Capabilites and Limitations.",
       issue: "Udemy",
       date: "Dec 2023",
       link: "#",
-      desc: "amet cupiditate aspernatur autem vel quod, ratione dolorem fugiat alias rerum.",
+      desc: "Learned about the Mental model of AI underlying machine properties that cause AI to act the way it does",
     },
   ];
   return (

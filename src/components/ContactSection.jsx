@@ -12,8 +12,8 @@ const ContactSection = () => {
       id: 1,
       icon: FaEnvelope,
       title: "Email",
-      value: "hello@example.com",
-      link: "mailto:hello@example.com",
+      value: "surendar16cool@gmail.com",
+      link: "mailto:surendar16cool@gmail.com",
     },
     {
       id: 2,
@@ -26,14 +26,14 @@ const ContactSection = () => {
       id: 3,
       icon: FaPhone,
       title: "Phone",
-      value: "+123-456-789",
-      link: "tel:+12346785",
+      value: "9176516964",
+      link:null
     },
     {
       id: 4,
       icon: FaMapMarkedAlt,
       title: "Location",
-      value: "New York",
+      value: "Chennai",
       link: null,
     },
   ];
@@ -49,10 +49,7 @@ const ContactSection = () => {
         <div className="grid md:grid-cols-2 gap-8">
           <div>
             <p className="text-gray-400 mb-8 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptatum, hic laboriosam quae quis porro accusamus nobis veniam
-              aspernatur obcaecati corrupti, nostrum id autem. Aliquam quos
-              laborum quia quaerat cumque. Ab?
+            React.js development opportunities, and full-time frontend roles. Feel free to reach out if you'd like to collaborate or discuss a project.
             </p>
             <div className="space-y-6">
               {contactInfo.map((info) => {
