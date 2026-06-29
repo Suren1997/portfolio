@@ -15,19 +15,19 @@ const ContactSection = () => {
       value: "surendar16cool@gmail.com",
       link: "mailto:surendar16cool@gmail.com",
     },
-    {
-      id: 2,
-      icon: FaLinkedin,
-      title: "LinkedIn",
-      value: "hello@example.com",
-      link: "#",
-    },
+    // {
+    //   id: 2,
+    //   icon: FaLinkedin,
+    //   title: "LinkedIn",
+    //   value: "hello@example.com",
+    //   link: "#",
+    // },
     {
       id: 3,
       icon: FaPhone,
       title: "Phone",
       value: "9176516964",
-      link:null
+      link: null,
     },
     {
       id: 4,
@@ -49,7 +49,9 @@ const ContactSection = () => {
         <div className="grid md:grid-cols-2 gap-8">
           <div>
             <p className="text-gray-400 mb-8 leading-relaxed">
-            React.js development opportunities, and full-time frontend roles. Feel free to reach out if you'd like to collaborate or discuss a project.
+              React.js development opportunities, and full-time frontend roles.
+              Feel free to reach out if you'd like to collaborate or discuss a
+              project.
             </p>
             <div className="space-y-6">
               {contactInfo.map((info) => {
@@ -92,16 +94,16 @@ const ContactSection = () => {
             <form>
               <div className="mb-4">
                 <label
-                  htmlFor="email"
+                  htmlFor="name"
                   className="text-white block mb-2 text-sm font-medium"
                 >
-                  Email
+                  Your Name
                 </label>
                 <input
-                  type="email"
-                  id="email"
+                  type="text"
+                  id="text"
                   className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white text-sm focus:outline-none focus:border-primary transition-colors"
-                  placeholder="your@email.com"
+                  placeholder="your name"
                   required
                 />
               </div>

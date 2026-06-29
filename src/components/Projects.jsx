@@ -2,6 +2,7 @@ import React from "react";
 import proj1 from "../assets/weather.png";
 import proj2 from "../assets/Age_Thumb.png";
 import proj3 from "../assets/Music_Thumb.png";
+import proj4 from "../assets/chatbot-thumb.png";
 
 const Projects = () => {
   const projects = [
@@ -10,14 +11,14 @@ const Projects = () => {
       image: proj1,
       title: "Weather App",
       desc: "Search weather by city name",
-      tech: ["HTML","CSS","Javascript"],
+      tech: ["HTML", "CSS", "Javascript"],
     },
     {
       id: 2,
       image: proj2,
       title: "Age Calculator",
       desc: "Calculate Age",
-      tech: ["HTML","CSS","Javscript"],
+      tech: ["HTML", "CSS", "Javscript"],
     },
     {
       id: 3,
@@ -25,6 +26,13 @@ const Projects = () => {
       title: "Music Player",
       desc: "Customized own Music with Music Player",
       tech: ["HTML", "CSS", "Javascript"],
+    },
+    {
+      id: 4,
+      image: proj4,
+      title: "AI ChatBot",
+      desc: "AI Assistant ChatBot",
+      tech: ["Flask", "HTML", "CSS", "Javascript"],
     },
   ];
   return (
