@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   FaEnvelope,
   FaLinkedin,
@@ -6,14 +6,30 @@ import {
   FaPhone,
 } from "react-icons/fa";
 
+const RECIPIENT_EMAIL = "surendar16cool@gmail.com";
+
 const ContactSection = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [status, setStatus] = useState("idle");
+
+  useEffect(() => {
+    if (status !== "success" && status !== "error") return;
+
+    const timer = setTimeout(() => setStatus("idle"), 5000);
+    return () => clearTimeout(timer);
+  }, [status]);
+
   const contactInfo = [
     {
       id: 1,
       icon: FaEnvelope,
       title: "Email",
-      value: "surendar16cool@gmail.com",
-      link: "mailto:surendar16cool@gmail.com",
+      value: RECIPIENT_EMAIL,
+      link: `mailto:${RECIPIENT_EMAIL}`,
     },
     // {
     //   id: 2,
@@ -37,6 +53,49 @@ const ContactSection = () => {
       link: null,
     },
   ];
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("loading");
+
+    try {
+      const response = await fetch(
+        `https://formsubmit.co/ajax/${RECIPIENT_EMAIL}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            message: formData.message,
+            _subject: `Portfolio message from ${formData.name}`,
+            _template: "table",
+            _captcha: "false",
+          }),
+        }
+      );
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setStatus("success");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
+  };
+
   return (
     <section className="py-20 bg-gray-900" id="contact">
       <div className="container mx-auto px-4 max-w-6xl">
@@ -44,7 +103,7 @@ const ContactSection = () => {
           <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-2">
             Let's Connect.
           </h2>
-          <div className="w-28 h-1 bg:primary mx-auto mt-2 rounded-2xl"></div>
+          <div className="w-28 h-1 bg-primary mx-auto mt-2 rounded-2xl"></div>
         </div>
         <div className="grid md:grid-cols-2 gap-8">
           <div>
@@ -91,7 +150,7 @@ const ContactSection = () => {
           </div>
           {/* Contact form */}
           <div className="bg-gray-800 rounded-lg p-6">
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label
                   htmlFor="name"
@@ -101,10 +160,33 @@ const ContactSection = () => {
                 </label>
                 <input
                   type="text"
-                  id="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white text-sm focus:outline-none focus:border-primary transition-colors"
-                  placeholder="your name"
+                  placeholder="Your name"
                   required
+                  disabled={status === "loading"}
+                />
+              </div>
+              <div className="mb-4">
+                <label
+                  htmlFor="email"
+                  className="text-white block mb-2 text-sm font-medium"
+                >
+                  Your Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white text-sm focus:outline-none focus:border-primary transition-colors"
+                  placeholder="your.email@example.com"
+                  required
+                  disabled={status === "loading"}
                 />
               </div>
               <div className="mb-6">
@@ -116,17 +198,34 @@ const ContactSection = () => {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white text-sm focus:outline-none focus:border-primary transition-colors"
-                  placeholder="Your Message....."
+                  placeholder="Your message..."
                   rows="4"
                   required
+                  disabled={status === "loading"}
                 />
               </div>
+
+              {status === "success" && (
+                <p className="mb-4 text-sm text-green-400">
+                  Message sent successfully! I'll get back to you soon.
+                </p>
+              )}
+              {status === "error" && (
+                <p className="mb-4 text-sm text-red-400">
+                  Something went wrong. Please try again or email me directly.
+                </p>
+              )}
+
               <button
                 type="submit"
-                className="w-full px-6 py-2.5 bg-primary text-white rounded-lg font-medium hover:bg-primary/80"
+                disabled={status === "loading"}
+                className="w-full px-6 py-2.5 bg-primary text-white rounded-lg font-medium hover:bg-primary/80 disabled:opacity-60 disabled:cursor-not-allowed transition-colors"
               >
-                Send Message
+                {status === "loading" ? "Sending..." : "Send Message"}
               </button>
             </form>
           </div>
