@@ -4,10 +4,12 @@ import {
   Building,
   Calendar,
   Cpu,
-  Layers,
   Layout,
   Terminal,
-  Box
+  Box,
+  TypeIcon,
+  WorkflowIcon,
+  DatabaseIcon
 } from "lucide-react";
 
 const Experience = () => {
@@ -36,6 +38,24 @@ const Experience = () => {
       width: "75%",
       icon: Box,
     },
+    {
+      id:5,
+      name:"TypeScript",
+      width: "40%",
+      icon: TypeIcon,
+    },
+    {
+      id:6,
+      name:"Node.js",
+      width: "40%",
+      icon: WorkflowIcon,
+    },
+    {
+      id:7,
+      name:"MongoDB",
+      width: "40%",
+      icon: DatabaseIcon,
+    }
   ];
 
   const experiences = [

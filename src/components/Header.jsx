@@ -14,7 +14,7 @@ const Headers = () => {
   const scrollToSection = (href) => {
     setIsMenuOpen(false);
     document.querySelector(href)?.scrollIntoView({
-      behaviort: "smooth",
+      behavior: "smooth",
     });
   };
   return (

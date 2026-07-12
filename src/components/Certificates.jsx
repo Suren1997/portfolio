@@ -1,5 +1,11 @@
-import { Award, Calendar, ExternalLink, ShieldCheck } from "lucide-react";
 import React from "react";
+import { Award, Calendar, ExternalLink, ShieldCheck } from "lucide-react";
+import RisingAward from "../assets/Award.jpeg";
+import Framework from "../assets/AI_FLUENCY.pdf";
+import Limitation from "../assets/CAPABILITY.pdf";
+import MCP from "../assets/MCP.pdf";
+import ClaudeCoWork from "../assets/CLAUDE_COWORK.pdf";
+import EU_Act from "../assets/EU_AI_ACT.pdf";
 
 const Certificates = () => {
   const certifications = [
@@ -7,25 +13,49 @@ const Certificates = () => {
       id: 1,
       title: "Rising Star Award",
       issue: "Solverminds",
-      date: "2024",
-      link: "#",
+      date: "JAN 2024",
+      link: RisingAward,
       desc: "Awarded the 'Rising Star' recognition for excellence in team collaboration, delivering impactful results, and showing high potential for future leadership within the department.",
     },
     {
       id: 2,
       title: "Anthropic AI: Fluency Framework and Foundation",
       issue: "Anthropic",
-      date: "2026",
-      link: "#",
+      date: "JUN 2026",
+      link: Framework,
       desc: "Completed the Anthropic AI Fluency curriculum, developing core competencies to leverage generative AI safely and effectively:",
     },
     {
       id: 3,
       title: "Anthropic AI:Capabilites and Limitations.",
-      issue: "Udemy",
-      date: "Dec 2023",
-      link: "#",
+      issue: "Anthropic",
+      date: "JUN 2026",
+      link: Limitation,
       desc: "Learned about the Mental model of AI underlying machine properties that cause AI to act the way it does",
+    },
+    {
+      id: 4,
+      title: "Model Context and Protocol",
+      issue: "Anthropic",
+      date: "JUN 2026",
+      link: MCP,
+      desc: "Gained Knowledge on how to communicate with external tools, databases, APIs, and applications in a standardized way",
+    },
+    {
+      id: 5,
+      title: "Claude CoWork",
+      issue: "Anthropic",
+      date: "JUN 2026",
+      link: ClaudeCoWork,
+      desc: "Claude AI as a collaborative teammate rather than just a chatbot that answers questions.",
+    },
+    {
+      id: 6,
+      title: "Understanding EU AI Act",
+      issue: "Anthropic",
+      date: "JUN 2026",
+      link: EU_Act,
+      desc: "Ensure AI systems are safe, transparent, trustworthy, and respect fundamental rights",
     },
   ];
   return (

@@ -3,6 +3,8 @@ import proj1 from "../assets/weather.png";
 import proj2 from "../assets/Age_Thumb.png";
 import proj3 from "../assets/Music_Thumb.png";
 import proj4 from "../assets/chatbot-thumb.png";
+import proj5 from "../assets/cart_thumb.png";
+
 
 const Projects = () => {
   const projects = [
@@ -12,6 +14,7 @@ const Projects = () => {
       title: "Weather App",
       desc: "Search weather by city name",
       tech: ["HTML", "CSS", "Javascript"],
+      link:"https://weather-app-nine-livid-61.vercel.app/"
     },
     {
       id: 2,
@@ -19,6 +22,7 @@ const Projects = () => {
       title: "Age Calculator",
       desc: "Calculate Age",
       tech: ["HTML", "CSS", "Javscript"],
+      link:"https://age-calculator-orpin-ten.vercel.app/"
     },
     {
       id: 3,
@@ -26,6 +30,7 @@ const Projects = () => {
       title: "Music Player",
       desc: "Customized own Music with Music Player",
       tech: ["HTML", "CSS", "Javascript"],
+      link:"https://music-player-lake-omega.vercel.app/"
     },
     {
       id: 4,
@@ -33,7 +38,16 @@ const Projects = () => {
       title: "AI ChatBot",
       desc: "AI Assistant ChatBot",
       tech: ["Flask", "HTML", "CSS", "Javascript"],
+      link:"https://ai-simple-chatbot-zeta.vercel.app/"
     },
+    {
+      id: 5,
+      image: proj5,
+      title: "Cart Project",
+      desc: "Simple Cart Project with React, TypeScript",
+      tech: ["React", "TypeScript"],
+      link:"https://cart-project-jet.vercel.app/"
+    }
   ];
   return (
     <section className="py-16 bg-gray-900" id="projects">
@@ -50,6 +64,7 @@ const Projects = () => {
               key={project.id}
               className="bg-gray-800 rounded-lg overflow-hidden shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-300"
             >
+              <a href={project.link} target="_blank" rel="noopener noreferrer">
               <img
                 src={project.image}
                 alt={project.title}
@@ -71,6 +86,7 @@ const Projects = () => {
                   ))}
                 </div>
               </div>
+                  </a>
             </div>
           ))}
         </div>
