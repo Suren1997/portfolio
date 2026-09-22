@@ -36,7 +36,10 @@ const HeroSection = () => {
               growth and customer satisfaction.
             </p>
             <div className="flex items-center gap-3 pt-9 flex-col sm:flex-row sm:w-max lg:mx-0">
-              <button className="px-6 md:px-7 py-3 rounded-full relative group w-full sm:w-max flex justify-center" onClick={() => scrollToSection("#contact")}>
+              <button
+                className="px-6 md:px-7 py-3 rounded-full relative group w-full sm:w-max flex justify-center"
+                onClick={() => scrollToSection("#contact")}
+              >
                 <span className="absolute inset-0 rounded-3xl group-hover:scale-105 origin-center transition-all ease-in-out bg-primary border-2 border-transparent"></span>
                 <span className="relative flex items-center justify-center text-white">
                   Hire Me
@@ -49,7 +52,7 @@ const HeroSection = () => {
                     <div className="download-loader text-white hidden"></div>
                   </div>
                   <a
-                    href="../Surendar_Software_Engineer.pdf"
+                    href="../Surendar_Resume_Updated.Pdf"
                     download="SurendarResume.pdf"
                     className="pl-2 text-primary"
                   >

@@ -9,7 +9,7 @@ import {
   Box,
   TypeIcon,
   WorkflowIcon,
-  DatabaseIcon
+  DatabaseIcon,
 } from "lucide-react";
 
 const Experience = () => {
@@ -39,23 +39,23 @@ const Experience = () => {
       icon: Box,
     },
     {
-      id:5,
-      name:"TypeScript",
+      id: 5,
+      name: "TypeScript",
       width: "40%",
       icon: TypeIcon,
     },
     {
-      id:6,
-      name:"Node.js",
+      id: 6,
+      name: "Node.js",
       width: "40%",
       icon: WorkflowIcon,
     },
     {
-      id:7,
-      name:"MongoDB",
+      id: 7,
+      name: "MongoDB",
       width: "40%",
       icon: DatabaseIcon,
-    }
+    },
   ];
 
   const experiences = [
@@ -63,7 +63,7 @@ const Experience = () => {
       id: 1,
       role: "Software Engineer",
       company: "Solverminds Solutions",
-      date: "Oct 2022 - Jun 2026",
+      date: "Oct 2022 - Present",
     },
   ];
 
