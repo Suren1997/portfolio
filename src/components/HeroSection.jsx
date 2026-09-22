@@ -52,7 +52,7 @@ const HeroSection = () => {
                     <div className="download-loader text-white hidden"></div>
                   </div>
                   <a
-                    href="../Surendar_Resume_Updated.Pdf"
+                    href="../Surendar_Resume_Updated.pdf"
                     download="SurendarResume.pdf"
                     className="pl-2 text-primary"
                   >
